@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Person</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <form action="/edit/{{ person.PersonID }}" method="POST">
+        <h2>Edit Person</h2>
+        <input type="text" name="LastName" value="{{ person.LastName }}" placeholder="Last Name" required>
+        <input type="text" name="FirstName" value="{{ person.FirstName }}" placeholder="First Name" required>
+        <input type="text" name="Address" value="{{ person.Address }}" placeholder="Address">
+        <input type="text" name="City" value="{{ person.City }}" placeholder="City">
+        <button type="submit">Update</button>
+        <a href="/all_data">Cancel</a>
+    </form>
+</body>
+</html>

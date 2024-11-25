@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Manage Person Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Manage Person Data</h1>
+
+        <!-- Display recently added/updated record -->
+        <div class="recent-record">
+            <h2>Recently Added/Updated Record</h2>
+            {% if recent_person %}
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Last Name</th>
+                    <th>First Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                </tr>
+                <tr>
+                    <td>{{ recent_person.PersonID }}</td>
+                    <td>{{ recent_person.LastName }}</td>
+                    <td>{{ recent_person.FirstName }}</td>
+                    <td>{{ recent_person.Address }}</td>
+                    <td>{{ recent_person.City }}</td>
+                </tr>
+            </table>
+            {% else %}
+            <p>No recent data available.</p>
+            {% endif %}
+        </div>
+
+        <!-- Form to add a new person -->
+        <form action="/add" method="POST">
+            <h2>Add New Person</h2>
+            <input type="text" name="LastName" placeholder="Last Name" required>
+            <input type="text" name="FirstName" placeholder="First Name" required>
+            <input type="text" name="Address" placeholder="Address">
+            <input type="text" name="City" placeholder="City">
+            <button type="submit">Add Person</button>
+        </form>
+
+        <!-- Link to view all data -->
+        <div class="view-all">
+            <a href="/all_data">View All Records</a>
+        </div>
+    </div>
+</body>
+</html>

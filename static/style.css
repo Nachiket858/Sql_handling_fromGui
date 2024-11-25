@@ -1,0 +1,104 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #FFF8E1; /* Light saffron background */
+    color: #FF8C00; /* Saffron color for text */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFAF0; /* Soft saffron shade for table background */
+}
+
+th, td {
+    border: 1px solid #FFA500; /* Saffron border */
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #FF8C00; /* Saffron for table header */
+    color: white;
+}
+
+td {
+    color: #FF4500; /* Deeper saffron for table data */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #FF8C00; /* Saffron for links */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #FF4500; /* Darker saffron on hover */
+}
+
+/* Buttons */
+button {
+    background-color: #FF8C00; /* Saffron button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker saffron on hover */
+}
+
+/* Form styling */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #FFA500; /* Saffron border */
+    border-radius: 8px;
+    background-color: #FFF8E1; /* Light saffron */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FFA500; /* Saffron border */
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #FF4500; /* Highlighted saffron on focus */
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #FF4500; /* Darker saffron for headings */
+}
+
+/* Links in tables */
+.actions a {
+    margin-right: 10px;
+}
+
+.actions a.delete {
+    color: #FF4500; /* Darker saffron for delete */
+}
+
+.actions a:hover {
+    text-decoration: underline;
+}
+
+/* Add padding to bottom links */
+a {
+    margin-top: 20px;
+    display: inline-block;
+}

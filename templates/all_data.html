@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>All Records</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.PersonID }}</td>
+            <td>{{ person.LastName }}</td>
+            <td>{{ person.FirstName }}</td>
+            <td>{{ person.Address }}</td>
+            <td>{{ person.City }}</td>
+            <td class="actions">
+                <a href="/edit/{{ person.PersonID }}">Edit</a>
+                <a href="/delete/{{ person.PersonID }}" class="delete">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/" style="margin-top: 20px; display: inline-block;">Back to Home</a>
+</body>
+</html>
